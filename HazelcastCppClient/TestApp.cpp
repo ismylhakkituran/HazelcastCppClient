@@ -36,11 +36,10 @@ int main(int argc,char* argv[])
 
 	ClientConfig clientConfig;
 
-	clientConfig.addAddress             ("localhost");			   //      / u don not need to set these...
-	clientConfig.groupconfig.setProtocolType  ("P01");             //     /| u don not need to set these...
-	clientConfig.groupconfig.setName          ("dev"); 		       //     \| u don not need to set these...
-	clientConfig.groupconfig.setPassword ("dev-pass");             //      \ u don not need to set these...
-
+	clientConfig.addAddress             ("localhost");	
+	clientConfig.groupconfig.setProtocolType  ("P01");      
+	clientConfig.groupconfig.setName          ("dev"); 	
+	clientConfig.groupconfig.setPassword ("dev-pass");            
 	HazelcastClient client(clientConfig );
 
 	timeval ta;
@@ -90,24 +89,3 @@ int main(int argc,char* argv[])
 	return 0;
 }
 //--------------------------------------------------------------------------------------------------
-/*	std::vector<string> look=Foo::parse("ismail\r\nhakki\r\nturan\r\n");
-	for(int i=0; i<look.size();i++ )
-		std::cout<<"\n "<<i<<". ---"<<look[i]<<"---";*/
-
-
-/*
-    map.put("23","name","0",false,"12","ismailkol",ov); ov=" ";
-    map.put("23","name","0",false,"12","mailvol",ov);	ov=" ";
-    map.put("23","name","0",false,"12","isilbol",ov);
-    std::cout<<"\nLOOk ov:: "<<ov<<".....";
-    map.get("345","name","12",gov);
-    std::cout<<"\nLOOk gov:: "<<gov<<".....";
-
-    std::cin>>take;
-*/
-
-/*		for(int i = 0; i < 10 ; ++i){
-
-			threads[i](&Map::put,&map,Foo::toString(i),Foo::toString(i),"0",false,Foo::toString(i),"merhaba",ov ) );
-			threads[i].join();
-		}*/
